@@ -20,29 +20,49 @@ struct DetailsScreen: View {
                         .font(.system(size: 100))
                 })
                 
-                HStack{
-                    VStack(alignment: .leading, spacing: 1.0, content: {
+                VStack(alignment: .leading, spacing: 1.0, content: {
 
+                   HStack{
                     Text("Country Name:")
                         .fontWeight(Font.Weight.heavy)
                         .font(.system(size: 20))
-                    Text(country?.name ?? "")
-                        .fontWeight(Font.Weight.regular)
-                        .font(.system(size: 30))
-                    Text("Capital:").fontWeight(Font.Weight.heavy)
+                    Text(country?.name ?? "").fontWeight(Font.Weight.regular)
+                           .font(.system(size: 25))
+                       
+                    }
+                        
+                    HStack{
+                        Text("Capital:").fontWeight(Font.Weight.heavy)
                            .font(.system(size: 20))
-                    Text(country?.capital ?? "")
-                       .fontWeight(Font.Weight.regular)
-                       .font(.system(size: 30))
-                    
-                    Text("Languages:").fontWeight(Font.Weight.heavy).font(.system(size: 20))
-                         Text(country?.languages.first?.name ?? "")
-                             .fontWeight(Font.Weight.regular)
-                             .font(.system(size: 30))
-                    Text("Currency:").fontWeight(Font.Weight.heavy).font(.system(size: 20))
-                    Text(country?.currency ?? "")
-                        .fontWeight(Font.Weight.regular)
-                        .font(.system(size: 30))
+                        Text(country?.capital ?? "")
+                           .fontWeight(Font.Weight.regular)
+                           .font(.system(size: 25))
+                        
+                    }
+                  HStack{
+                    Text("Languages:")
+                          .fontWeight(Font.Weight.heavy)
+                          .font(.system(size: 20))
+                      
+                      ForEach((country?.languages.indices)!) { index in
+                          Text(country?.languages[index].name ?? "")
+                                 .fontWeight(Font.Weight.regular)
+                                 .font(.system(size: 25))
+                      }
+                
+                      
+                  }
+                  HStack{
+                        Text("Currency:")
+                            .fontWeight(Font.Weight.heavy)
+                            .font(.system(size: 20))
+                        Text(country?.currency ?? "")
+                            .fontWeight(Font.Weight.regular)
+                            .font(.system(size: 25))
+                        
+                    }
+                
+    
                     
                 })
                
@@ -50,8 +70,6 @@ struct DetailsScreen: View {
                 
                 Spacer()
                     
-                }
-                Spacer()
             }
             
         }

@@ -16,7 +16,11 @@
                     NavigationLink (destination: DetailsScreen(countryCode:  country.code ), label: {
                         HStack{
                             Text(country.emoji)
-                            Text(country.name)
+                                .fontWeight(Font.Weight.regular)
+                                .font(.system(size: 35))
+                            
+                            Text(country.name)  .fontWeight(Font.Weight.regular)
+                                .font(.system(size: 25))
                             
                         }})
                 }
