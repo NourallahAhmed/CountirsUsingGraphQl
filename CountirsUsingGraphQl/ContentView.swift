@@ -12,12 +12,17 @@
         var body: some View {
             NavigationView{
                 List( countries, id: \.code ){ country in
-                    HStack{
-                        Text(country.name)
-                        Text(country.)
-
-                    }
-                }.navigationTitle("Countries")
+                    
+                    NavigationLink (destination: DetailsScreen(countryCode:  country.code ), label: {
+                        HStack{
+                            Text(country.emoji)
+                            Text(country.name)
+                            
+                        }})
+                }
+                .listStyle(.plain)
+                .navigationTitle("Countries")
+                    
             }.onAppear(perform: {
                 Network.shared.apollo.fetch(
                     query: AllCountriesQuery()
@@ -29,12 +34,21 @@
                         
                         if ((graphQlResult.data?.countries) != nil) {
                         
+                            DispatchQueue.main.async {
+                            
                             self.countries = graphQlResult.data?.countries ?? []
+                            }
+                            
                         }
                     case .failure(let error):
                         print(error)
                     }
-                }})
+                }}
+            
+
+            
+            
+            )
         }
     }
 

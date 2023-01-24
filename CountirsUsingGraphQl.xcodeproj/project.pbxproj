@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B6DEABE2980358C0043243B /* DetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6DEABD2980358C0043243B /* DetailsScreen.swift */; };
 		9B88A815297FF7DD00BB9A4A /* CountirsUsingGraphQlApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88A814297FF7DD00BB9A4A /* CountirsUsingGraphQlApp.swift */; };
 		9B88A817297FF7DD00BB9A4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88A816297FF7DD00BB9A4A /* ContentView.swift */; };
 		9B88A819297FF7E000BB9A4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B88A818297FF7E000BB9A4A /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B6DEABD2980358C0043243B /* DetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreen.swift; sourceTree = "<group>"; };
 		9B88A811297FF7DD00BB9A4A /* CountirsUsingGraphQl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountirsUsingGraphQl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B88A814297FF7DD00BB9A4A /* CountirsUsingGraphQlApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountirsUsingGraphQlApp.swift; sourceTree = "<group>"; };
 		9B88A816297FF7DD00BB9A4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				9B88A84D297FFB9600BB9A4A /* GraphQl */,
 				9B88A814297FF7DD00BB9A4A /* CountirsUsingGraphQlApp.swift */,
 				9B88A816297FF7DD00BB9A4A /* ContentView.swift */,
+				9B6DEABD2980358C0043243B /* DetailsScreen.swift */,
 				9B88A818297FF7E000BB9A4A /* Assets.xcassets */,
 				9B88A81A297FF7E000BB9A4A /* Preview Content */,
 				9B88A8702980044500BB9A4A /* network.swift */,
@@ -311,6 +314,7 @@
 			files = (
 				9B88A817297FF7DD00BB9A4A /* ContentView.swift in Sources */,
 				9B88A86F2980030300BB9A4A /* API.swift in Sources */,
+				9B6DEABE2980358C0043243B /* DetailsScreen.swift in Sources */,
 				9B88A8712980044500BB9A4A /* network.swift in Sources */,
 				9B88A815297FF7DD00BB9A4A /* CountirsUsingGraphQlApp.swift in Sources */,
 			);

@@ -11,3 +11,15 @@ query AllCountries{
     
   }
 }
+
+query CountryDetails($id: ID! = "") {
+  country(code: $id) {
+    name
+    capital
+    currency
+    emoji
+    languages {
+      name
+    }
+  }
+}
